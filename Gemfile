@@ -1,32 +1,81 @@
-source "https://rubygems.org"
+GEM
+  remote: https://rubygems.org/
+  specs:
+    activemodel (6.1.4)
+      activesupport (= 6.1.4)
+    activerecord (6.1.4)
+      activemodel (= 6.1.4)
+      activesupport (= 6.1.4)
+    activesupport (6.1.4)
+      concurrent-ruby (~> 1.0, >= 1.0.2)
+      i18n (>= 1.6, < 2)
+      minitest (>= 5.1)
+      tzinfo (~> 2.0)
+      zeitwerk (~> 2.3)
+    coderay (1.1.3)
+    concurrent-ruby (1.1.9)
+    database_cleaner (2.0.1)
+      database_cleaner-active_record (~> 2.0.0)
+    database_cleaner-active_record (2.0.1)
+      activerecord (>= 5.a)
+      database_cleaner-core (~> 2.0.0)
+    database_cleaner-core (2.0.1)
+    diff-lcs (1.4.4)
+    i18n (1.8.10)
+      concurrent-ruby (~> 1.0)
+    method_source (1.0.0)
+    minitest (5.14.4)
+    mustermann (1.1.1)
+      ruby2_keywords (~> 0.0.1)
+    pry (0.14.1)
+      coderay (~> 1.1)
+      method_source (~> 1.0)
+    rack (2.2.3)
+    rack-protection (2.1.0)
+      rack
+    rake (13.0.6)
+    require_all (3.0.0)
+    rspec (3.10.0)
+      rspec-core (~> 3.10.0)
+      rspec-expectations (~> 3.10.0)
+      rspec-mocks (~> 3.10.0)
+    rspec-core (3.10.1)
+      rspec-support (~> 3.10.0)
+    rspec-expectations (3.10.1)
+      diff-lcs (>= 1.2.0, < 2.0)
+      rspec-support (~> 3.10.0)
+    rspec-mocks (3.10.2)
+      diff-lcs (>= 1.2.0, < 2.0)
+      rspec-support (~> 3.10.0)
+    rspec-support (3.10.2)
+    ruby2_keywords (0.0.5)
+    sinatra (2.1.0)
+      mustermann (~> 1.0)
+      rack (~> 2.2)
+      rack-protection (= 2.1.0)
+      tilt (~> 2.0)
+    sinatra-activerecord (2.0.23)
+      activerecord (>= 4.1)
+      sinatra (>= 1.0)
+    sqlite3 (1.4.2)
+    tilt (2.0.10)
+    tzinfo (2.0.4)
+      concurrent-ruby (~> 1.0)
+    zeitwerk (2.4.2)
 
-# An object-relational mapper
-# https://guides.rubyonrails.org/active_record_basics.html
-gem "activerecord", "~> 6.1"
+PLATFORMS
+  universal-darwin-20
+  x86_64-linux
 
-# Configures common Rake tasks for working with Active Record
-# https://github.com/sinatra-activerecord/sinatra-activerecord
-gem "sinatra-activerecord"
+DEPENDENCIES
+  activerecord (~> 6.1)
+  database_cleaner
+  pry
+  rake
+  require_all
+  rspec
+  sinatra-activerecord
+  sqlite3 (~> 1.4)
 
-# Run common tasks from the command line
-# https://github.com/ruby/rake
-gem "rake"
-
-# Provides functionality to interact with a SQLite3 database
-# https://github.com/sparklemotion/sqlite3-ruby
-gem "sqlite3", "~> 1.4"
-
-# Require all files in a folder
-# https://github.com/jarmo/require_all
-gem "require_all"
-
-# These gems will only be used when we are running the application locally
-group :development do
-  gem "pry"
-end
-
-# These gems will only be used when we are running tests
-group :test do
-  gem "database_cleaner"
-  gem "rspec"
-end
+BUNDLED WITH
+   2.3.7
